@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    int scoreTeamA = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(8);
     }
 
     public void displayForTeamA(int score) {
@@ -20,16 +20,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addThreePointsForTeamA(View view) {
-        displayForTeamA(3);
+        scoreTeamA += 3;
+        displayForTeamA(scoreTeamA);
     }
 
 
     public void addTwoPointsForTeamA(View view) {
-        displayForTeamA(2);
+        scoreTeamA += 2;
+        displayForTeamA(scoreTeamA);
     }
 
 
     public void addOnePointsForTeamA(View view) {
-        displayForTeamA(1);
+        scoreTeamA += 1;
+        displayForTeamA(scoreTeamA);
     }
 }
